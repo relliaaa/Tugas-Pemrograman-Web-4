@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajer Tugas & Produktivitas Harian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Asisten Produktivitas Harian</h1>
+            <p>Kelola tugas harian Anda, atur tenggat waktu, dan pantau skor produktivitas hari ini.</p>
+        </header>
+
+        <!-- Tracker Skor Produktivitas -->
+        <div class="productivity-tracker">
+            <div class="progress-info">
+                <h3>Skor Produktivitas Anda</h3>
+                <p id="progress-text">0% Tugas Selesai</p>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- Form Tambah Tugas -->
+        <div class="task-form-container">
+            <h2>Tambah Tugas Baru</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-name">Nama Kegiatan / Tugas</label>
+                    <input type="text" id="task-name" placeholder="Contoh: Bab 3 struktur data, Ngopi di warkop, Beli sabun" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="task-category">Kategori Kegiatan</label>
+                        <select id="task-category">
+                            <option value="Belajar">📚 Belajar</option>
+                            <option value="Ngopi">☕ Janji Ngopi</option>
+                            <option value="Belanja">🛒 Belanja</option>
+                            <option value="Olahraga">🏃‍♂️ Olahraga</option>
+                            <option value="Lainnya">✨ Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-priority">Tingkat Prioritas</label>
+                        <select id="task-priority">
+                            <option value="Tinggi">Tinggi 🔥</option>
+                            <option value="Sedang">Sedang ⚡</option>
+                            <option value="Rendah">Rendah ☕</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Input Batas Waktu Baru -->
+                <div class="form-group">
+                    <label for="task-deadline">Tenggat Waktu (Tanggal & Jam)</label>
+                    <input type="datetime-local" id="task-deadline" required>
+                </div>
+                <button type="submit" class="btn-add">Tambahkan Ke Daftar</button>
+            </form>
+        </div>
+
+        <!-- Daftar Tugas -->
+        <div class="task-list-container">
+            <h2>Daftar Tugas Hari Ini</h2>
+            <ul id="task-list">
+                <!-- Elemen tugas akan dimasukkan secara dinamis via JavaScript -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
